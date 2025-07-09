@@ -1,14 +1,15 @@
-# **Inventory Management Application System**
+# 📦 Inventory Management Application System
+
 A complete inventory product management system developed using:
-- **Java** – Core programming language used for backend development.
-- **Spring Boot** – Framework for building the backend RESTful API quickly and efficiently.
-- **Spring Data JPA** – Simplifies database interactions using JPA repositories.
-- **React** – Frontend library for building a responsive and dynamic user interface.
-- **Node.js** – Runtime environment often used to support frontend tooling and development.
-- **CSS3** – Styling language to design the application layout and appearance.
-- **JavaScript** – Scripting language to add interactivity on the frontend.
-- **PostgreSQL** – Relational database management system used to store product data.
-- **Maven** – Build automation tool to manage dependencies and project lifecycle.
+- **Java** ☕ – Core programming language used for backend development.
+- **Spring Boot** 🚀 – Framework for building the backend RESTful API quickly and efficiently.
+- **Spring Data JPA** 📚 – Simplifies database interactions using JPA repositories.
+- **React** ⚛️ – Frontend library for building a responsive and dynamic user interface.
+- **Node.js** 🟢 – Runtime environment often used to support frontend tooling and development.
+- **CSS3** 🎨 – Styling language to design the application layout and appearance.
+- **JavaScript** 💻 – Scripting language to add interactivity on the frontend.
+- **PostgreSQL** 🐘 – Relational database management system used to store product data.
+- **Maven** 📦 – Build automation tool to manage dependencies and project lifecycle.
 
 ---
 
@@ -23,7 +24,7 @@ Client Request → Controller → Service → Repository → Database
                  HTTP Layer → Business Logic → Data Access Layer
 ```
 
-### 1. **Controller Layer** (`@RestController`)
+### 1. **Controller Layer** (`@RestController`) 🎯
 The controller layer handles HTTP requests and responses. It acts as the entry point for all API endpoints.
 
 **Responsibilities:**
@@ -71,7 +72,7 @@ public class ProductController {
 (...)
 ```
 
-### 2. **Service Layer** (`@Service`)
+### 2. **Service Layer** (`@Service`) ⚙️
 The service layer contains the business logic of the application. It processes data, applies business rules, and coordinates between different components.
 
 **Responsibilities:**
@@ -119,7 +120,7 @@ public class ProductService {
 (...)
 ```
 
-### 3. **Repository Layer** (`@Repository`)
+### 3. **Repository Layer** (`@Repository`) 🗃️
 The repository layer handles data access operations. Spring Data JPA provides built-in methods and allows custom query definitions.
 
 **Responsibilities:**
@@ -132,14 +133,14 @@ The repository layer handles data access operations. Spring Data JPA provides bu
 ```java
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    
+
     List<Product> findByNameContainingIgnoreCase(String name);
     List<Product> findAllByOrderByQuantityAsc();
 
 }
 ```
 
-### 4. **Model/Entity Layer** (`@Entity`)
+### 4. **Model/Entity Layer** (`@Entity`) 🧱
 The model layer represents the data structure and maps to database tables using JPA annotations.
 
 **Example Structure:**
@@ -170,7 +171,7 @@ public class Product {
 }
 ```
 
-### 5. **Database Integration**
+### 5. **Database Integration** 🛢️
 Spring Boot automatically configures the database connection using properties defined in `application.properties`:
 
 ```properties
@@ -187,7 +188,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.jpa.properties.hibernate.format_sql=true
 ```
 
-### Request Flow Example
+### Request Flow Example 🔄
 When a client makes a `GET /products` request:
 
 1. **Controller** receives the HTTP request
@@ -201,7 +202,7 @@ When a client makes a `GET /products` request:
 9. **Controller** wraps the data in an HTTP response
 10. **Client** receives the JSON response
 
-### Benefits of This Architecture
+### Benefits of This Architecture 🎉
 
 **Separation of Concerns:**
 - Each layer has a specific responsibility
@@ -225,7 +226,7 @@ When a client makes a `GET /products` request:
 
 ---
 
-## Features
+## Features ✨
 ### Main Screen
 - Displays a table listing all products along with their details.
 - Search bar for filtering by ID or Name.
@@ -243,7 +244,7 @@ Interface allowing updates to name, price, or quantity, with a side-by-side comp
 
 ---
 
-## Tech Resources
+## Tech Resources 🛠️
 ### Backend (Spring Boot & PostgreSQL)
 - Layered Architecture (Controller → Service → Repository).
 - Input validation.
@@ -260,7 +261,7 @@ Interface allowing updates to name, price, or quantity, with a side-by-side comp
 
 ---
 
-## Folder Structure (Basic)
+## Folder Structure (Basic) 📂
 ```
 inventoryManagement/
 ├── backend/
@@ -287,27 +288,26 @@ inventoryManagement/
 └── README.md
 ```
 
-## API Endpoints
+## API Endpoints 🚪
 
 | Method | Endpoint                          | Description                           |
-|--------|-----------------------------------|---------------------------------------|
-| GET    | /products                         | Lists all products                    |
-| POST   | /products                         | Adds a new product                    |
-| GET    | /products/{id}                    | Retrieves a product by ID             |
-| PUT    | /products/{id}                    | Updates a product                     |
-| DELETE | /products/{id}                    | Deletes a product                     |
-| GET    | /products/search?name={name}      | Searches for products by name         |
-| GET    | /products/ordered-by-quantity     | Lists products ordered by quantity    |
-| GET    | /products/exists/{id}             | Checks if a product exists by ID      |
-
+|--------|---------------------------------|-------------------------------------|
+| GET    | /products                       | Lists all products                   |
+| POST   | /products                       | Adds a new product                   |
+| GET    | /products/{id}                  | Retrieves a product by ID            |
+| PUT    | /products/{id}                  | Updates a product                    |
+| DELETE | /products/{id}                  | Deletes a product                    |
+| GET    | /products/search?name={name}    | Searches for products by name        |
+| GET    | /products/ordered-by-quantity   | Lists products ordered by quantity   |
+| GET    | /products/exists/{id}           | Checks if a product exists by ID     |
 
 ---
 
-# Running Locally
+# Running Locally 🏃‍♂️
 
 Considering that you already have all the necessary tools installed to run this project locally (which are listed at the beginning of this file), follow the steps below to run the application on your machine:
 
-## 1. Database Setup (PostgreSQL)
+## 1. Database Setup (PostgreSQL) 🐘
 Before running the application, you need to set environment variables on your system so the backend can connect to the PostgreSQL database.
 
 Make sure the database is created before running the application:
@@ -344,7 +344,7 @@ set DB_USERNAME=your_username
 set DB_PASSWORD=your_password
 ```
 
-## 2. Basic Commands
+## 2. Basic Commands ⚙️
 ### Backend
 ```bash
 cd backend
@@ -358,7 +358,7 @@ npm install
 npm start
 ```
 
-## Swagger Documentation (OpenAPI)
+## Swagger Documentation (OpenAPI) 📄
 
 The project provides automatic API documentation powered by Swagger (OpenAPI) for easy testing and exploration of all available endpoints.
 
@@ -381,4 +381,3 @@ http://localhost:8080/swagger-ui.html
 - Retrieve all products.
 - Add, update, or delete products.
 - Search for products by name or quantity.
-
