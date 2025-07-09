@@ -1,0 +1,12 @@
+# Ignore node_modules em qualquer lugar
+**/node_modules/
+
+# Ignore target do Java em qualquer lugar
+**/target/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar logs
+*.log

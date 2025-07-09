@@ -1,0 +1,41 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs (Eclipse, IntelliJ, VS Code, NetBeans)
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+nbbuild/
+nbdist/
+.nb-gradle/
+dist/
+nbproject/private/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Custom local config (Spring profiles)
+src/main/resources/application-local.properties
+src/main/resources/application-dev.properties
+
+# Build folders (redundante, pois target/ já cobre na maioria dos casos)
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Help files
+HELP.md

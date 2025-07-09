@@ -1,0 +1,71 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+
+button {
+  transition: all 0.3s !important;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.modal-backdrop {
+  display: none;
+}
+
+.modal-content {
+  animation: fadeInScale 0.4s ease;
+}
+
+.modal-content.fade-out {
+  animation: fadeOutScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutScale {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.product-preview p {
+  margin: 0 0 0.35rem 0; 
+}
+.product-preview p:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.modal-backdrop-blur {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(1px);
+  z-index: 1040;
+}
