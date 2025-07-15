@@ -5,7 +5,6 @@ A complete inventory product management system developed using:
 - **Spring Boot** 🚀 – Framework for building the backend RESTful API quickly and efficiently.
 - **Spring Data JPA** 📚 – Simplifies database interactions using JPA repositories.
 - **React** ⚛️ – Frontend library for building a responsive and dynamic user interface.
-- **Node.js** 🟢 – Runtime environment often used to support frontend tooling and development.
 - **CSS3** 🎨 – Styling language to design the application layout and appearance.
 - **JavaScript** 💻 – Scripting language to add interactivity on the frontend.
 - **PostgreSQL** 🐘 – Relational database management system used to store product data.
